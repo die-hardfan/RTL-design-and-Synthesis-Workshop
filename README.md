@@ -22,3 +22,6 @@ Module 4: Introduction to Yosys and Synthesis Concepts
 Module 5: RTL to gate-level netlist using Yosys with SKY130 standard cells
 
 
+This repo is still under editing
+
+
