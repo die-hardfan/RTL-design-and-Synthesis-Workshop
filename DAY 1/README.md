@@ -26,6 +26,7 @@ To check/verify whether the implementation (RTL design) adheres to given specifi
 Simulation is done by applying test vectors/stimulus to the primary inputs of the DUT (design under test) and observing its primary outputs. This requires a stimulus generator and observer, all of which together forms the **testbench**. 
 
 A testbench has no primary inputs and outputs, since all it does is apply stimulus and observe the outputs of the DUT. 
+![](DAY 1/tb.png)
 
 ---
 
@@ -36,6 +37,7 @@ A simulator looks for the changes in inputs; when there is a change in any of th
 **No change in input → no change in output**, since it's not evaluated by the tool. 
 
 The output file of a simulator is called a **Value Change Dump (.vcd)**, which refers to the fact that the tool evaluates and "dumps" the output to a file when there’s an input **value change**.
+
 
 ---
 
@@ -89,6 +91,8 @@ All the tools used in this workshop have been run on **Oracle Virtual Box**. The
 
 **Aim:** simulate `good_mux.v` using iverilog
 
+![](DAY 1/simulation flow.png)
+
 - Navigate to `verilog_files` folder
 
 - Simulate:
@@ -115,6 +119,8 @@ All the tools used in this workshop have been run on **Oracle Virtual Box**. The
     gtkwave <vcd file name>
     ```
 
+![Simulation of good_mux.v](DAY 1/good_mux_simulation.png)
+
 ---
 
 ## Introduction to Synthesis using Yosys
@@ -123,7 +129,7 @@ RTL code/design is the behavioural representation of the required spec.
 What we need is hardware/circuit.  
 
 **Synthesis** is the implementation of the RTL code as circuit/hardware where the design/code is converted to gates and connections are made accordingly.
-
+![](DAY 1/synthesis flow.png)
 ---
 
 **Aim:** Synthesis of `good_mux.v`
@@ -179,8 +185,8 @@ What we need is hardware/circuit.
 
 **Before mapping to the standard cells** (`abc` command)
 
-*(illustration/step not shown here in text)*
+![](DAY 1/good_mux_showbeforeabc.png)
 
 **After mapping to the standard cells**
 
-*(illustration/step not shown here in text)*
+![](DAY 1/good_mux_showafterabc.png)
