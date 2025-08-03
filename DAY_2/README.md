@@ -55,74 +55,38 @@ Command:
 synth -top <sub_module_name>
 ```
 **Why?**
-
-When a design has multiple instances of the same submodule, it can be synthesized once and the netlist replicated in the final design. This saves time, especially if the submodule is complex/large.
-
-In massive designs, divide and conquer approach is applied:
-
-A large design is subdivided into smaller ones
-
-Each is synthesized individually (possibly in parallel to save time)
-
-The tool gives the most optimized version for each submodule
-
-Hence, the overall design is more optimized.
+1.	When a design has multiple instances of the same submodule, it can be synthesized once and the netlist replicated in the final design. This saves time, specially if the submodule is complex/large.
+2.	In massive designs, divide and conquer approach is applied. A large design is subdivided into smaller ones, and each is synthesized individually (perhaps in parallel to save time). The tool gives the most optimized version for each submodule, hence the overall design is more optimized. 
 
 ## FLIP FLOPS AND TYPES
-What?
+**What?**
 Storage elements that store 1 bit of data.
-
 **Why?**
-Transitions in a combinational circuit are not instantaneous due to the delays of the gates that make it up. Hence the outputs are prone to glitches (momentary wrong values due to changes in inputs that take time to propagate through gates).
+Transitions in a combinational circuit is not instantaneous, due to the delays of the gates that make it up. Hence the outputs of combinational circuits are prone to glitches (momentary wrong value due to change in the inputs, happens because these changes take time to propagate through the gates to its output). More gates means more delays, so more glitches.
+Modern day chips have so many functions, each of which is ultimately a combinational circuit. If combinational circuits are cascaded, then the output will never be stable because of all the glitches. To avoid this, flip flops are used. FF shields its output from glitches in its input, so they don’t propagate from one combinational circuit to next. 
+But also, having only combinational circuits means a large amount of time to evaluate the output (sum of propagation delays of gates in the path to output). To reduce the time taken, increase frequency of operation and thus increase the performance, FFs are used. This technique is commonly known as pipelining.
+Typically, when a circuit is powered on, the state of FFs in unknown (or garbage). To prevent this stage from affecting the output, FFs are initialised to bit 0 or 1 using reset or set.
 
-More gates → more delay → more glitches.
-
-Cascaded combinational circuits without isolation will never have a stable output.
-
-Flip-Flops (FFs) shield their output from input glitches, preventing propagation to the next stage.
-
-Also, only having combinational circuits means:
-
-Long time to evaluate outputs (sum of propagation delays)
-
-Hard to operate at high clock frequencies
-
-To improve this, FFs are used to introduce synchronization points — this technique is called pipelining.
-
-When a circuit is powered on, FFs are in an unknown state.
-
-To avoid this issue, FFs are initialized to 0 or 1 using reset or set.
-
-**Types of Flip-Flops**
-
+**Types of FFs:**
 Asynchronous set/reset FF
-
 Synchronous set/reset FF
-
 Asynchronous and synchronous reset FF
+(set and reset – if applied together causes race condition, so its not discussed here)
 
-(Set and reset together cause a race condition, so not discussed here)
+Asynchronous: set/reset works as soon as it is applied irrespective of the clock signal.
+Synchronous: set/reset signal waits for a clock edge, for it to be applied. 
 
-Asynchronous: Set/reset works immediately upon being asserted, regardless of clock signal.
+## RELEVANT LABS:
+Simulate and synthesize different DFFs. 
+<async reset dff pic>
+<sync reset dff pic>
 
-Synchronous: Set/reset is only effective at a clock edge.
+**Note:** In asynchronous set/reset, only when asserted, it is effective immediately. When the signal is de-asserted, the function of DFF  returns to normal only on the next clock edge, not immediately.
+INTERESTING OPTIMIZATIONS IN HARDWARE
+1.	Multiply by 2
+2.	Multiple by 8
 
-## RELEVANT LABS
-Simulate and synthesize different DFFs.
-
-**Note:**
-In asynchronous set/reset, the effect is immediate.
-But once the signal is de-asserted, the DFF returns to normal only after the next clock edge, not immediately.
-
-## INTERESTING OPTIMIZATIONS IN HARDWARE
-
-Multiply by 2 / Multiply by 8
-Multiplication by 2 is essentially a left shift by 1 position.
-
-This can be done via rewiring inputs to outputs — no logic gates or standard cells are needed.
-
-Hence, the abc command may throw an error because there is nothing to map to.
-
-This applies to multiplication (and division) by any non-negative power of 2.
+Multiplication by 2 is essentially left shift by 1 position. This can be done by rewiring the inputs to outputs, hence no standard cell is required. So, the ‘abc’ command throws an error, since there is nothing to map to. 
+This is application for multiplication (and division) by any non-negative power of 2. 
 
 
