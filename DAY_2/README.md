@@ -82,7 +82,9 @@ Simulate and synthesize different DFFs.
 <sync reset dff pic>
 
 **Note:** In asynchronous set/reset, only when asserted, it is effective immediately. When the signal is de-asserted, the function of DFF  returns to normal only on the next clock edge, not immediately.
-INTERESTING OPTIMIZATIONS IN HARDWARE
+
+
+## INTERESTING OPTIMIZATIONS IN HARDWARE
 1.	Multiply by 2
 2.	Multiple by 8
 
