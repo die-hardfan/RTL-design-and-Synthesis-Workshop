@@ -9,9 +9,13 @@ In short, this workshop intends to teach the Verilog coding guidelines that resu
 
 Over 10 days, I have:
 Learnt Verilog RTL from scratch
+
 Simulated designs using Iverilog and GTKWave
+
 Performed logic synthesis with Yosys
+
 Understood how RTL gets mapped to logic gates in real silicon
+
 Gained exposure to ASIC design flows using the SKY130 PDK
 
 ## Modulewise Content
@@ -26,7 +30,10 @@ Module 4: Introduction to Yosys and Synthesis Concepts
 Module 5: RTL to gate-level netlist using Yosys with SKY130 standard cells
 
 
-** NOTE: Image names
+------
+
+
+** NOTE:** Image names
 .._stat --> screenshot of the statistics that's printed after 'synth' command in yosys
 
 .._abcstat --> screenshot of the statistics that's printed after 'abc' command in yosys
