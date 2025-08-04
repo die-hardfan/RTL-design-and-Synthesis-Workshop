@@ -44,8 +44,8 @@ The below code snippet is an example of boolean optimization techniques.
 ```
 
 ![](images/optcheck3.jpeg)
-Expected circuit for optcheck3.v
+Expected circuit for optcheck4.v
 
 ![](images/opt_check4_show_afterabc_optclean.png)
-Actual circuit for optcheck3.v
+Actual circuit for optcheck4.v
 
