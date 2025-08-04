@@ -8,6 +8,7 @@ This workshop empowers one to master Register Transfer Level (RTL) design, simul
 In short, this workshop intends to teach the Verilog coding guidelines that result in predictable logic in Silicon.
 
 Over 10 days, I have:
+
 Learnt Verilog RTL from scratch
 
 Simulated designs using Iverilog and GTKWave
@@ -19,6 +20,7 @@ Understood how RTL gets mapped to logic gates in real silicon
 Gained exposure to ASIC design flows using the SKY130 PDK
 
 ## Modulewise Content
+
 Module 1: Intro to Verilog and HDL simulation with iverilog and GTKWave
 
 Module 2: RTL coding styles, module design, and simulation debugging
@@ -34,6 +36,7 @@ Module 5: RTL to gate-level netlist using Yosys with SKY130 standard cells
 
 
 **NOTE:** Image names
+
 .._stat --> screenshot of the statistics that's printed after 'synth' command in yosys
 
 .._abcstat --> screenshot of the statistics that's printed after 'abc' command in yosys
