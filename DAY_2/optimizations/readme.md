@@ -5,7 +5,7 @@ Multiplication (and division) by 2 or a non-negative power of 2 leads to left (o
 ![](images/mul2_show.png)
 Circuit for multiplication by 2
 
-![](images/mul2_stat_abcerror.png)
+![](images/mul2_stat_abc error.png)
 'abc' error and 'synth' statistics that prove no cells are used
 
 
