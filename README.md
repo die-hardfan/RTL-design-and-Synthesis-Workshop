@@ -33,7 +33,7 @@ Module 5: RTL to gate-level netlist using Yosys with SKY130 standard cells
 ------
 
 
-** NOTE:** Image names
+**NOTE:** Image names
 .._stat --> screenshot of the statistics that's printed after 'synth' command in yosys
 
 .._abcstat --> screenshot of the statistics that's printed after 'abc' command in yosys
