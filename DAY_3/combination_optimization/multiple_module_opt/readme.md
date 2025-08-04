@@ -1,4 +1,4 @@
-## Design flow from simulation to synthesis to get the most optimized circuit
+## Commands in Yosys to get the most optimized circuit through synthesis
 ```bash
 1. read_liberty -lib <path to .lib file>
 2. read_verilog multiple_module_opt.v
@@ -8,7 +8,7 @@
 6. abc -liberty <path to .lib file>
 ```
 
-If the module is not flattened, the final circuit is not the most optimized.
+If the module is not flattened, the final circuit is not the most optimized. The unused logic is removed but boolean optimization is not done.
 
 The file multmodoptv2.v is the same as multiple_module_opt.v, except the submodules are removed and logic is directly defined within one module.
 The synthesis of this can follow the normal procedure, and it still gives the most optimized circuit.
