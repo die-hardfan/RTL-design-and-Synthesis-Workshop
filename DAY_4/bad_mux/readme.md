@@ -16,4 +16,4 @@ But the synthesis tool generates a mux, as expected, leading to a mismatch betwe
 
 ![RTL code simulation](badmux_sim.png)
 
-![Gate level simulation](DAY_4/bad_mux/badmux_gls.png)
+![Gate level simulation](badmux_gls.png)
