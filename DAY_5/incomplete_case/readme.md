@@ -7,7 +7,7 @@ In the code below, 2'b10 and 2'b11 cases are not defined and there is not defaul
 
 RTL simulation result
 
-![](iimages/incompcase_gls.png)
+![](images/incompcase_gls.png)
 
 GLS result
 
