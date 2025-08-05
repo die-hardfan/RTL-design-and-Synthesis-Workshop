@@ -71,7 +71,7 @@ Typically, when a circuit is powered on, the state of FFs in unknown (or garbage
 Asynchronous set/reset FF
 Synchronous set/reset FF
 Asynchronous and synchronous reset FF
-(set and reset – if applied together causes race condition, so its not discussed here)
+(set and reset – if applied together, causes a race condition, so it's not discussed here)
 
 Asynchronous: set/reset works as soon as it is applied irrespective of the clock signal.
 Synchronous: set/reset signal waits for a clock edge, for it to be applied. 
@@ -86,9 +86,9 @@ Simulate and synthesize different DFFs.
 
 ## INTERESTING OPTIMIZATIONS IN HARDWARE
 1.	Multiply by 2
-2.	Multiple by 8
+2.	Multiply by 8
 
 Multiplication by 2 is essentially left shift by 1 position. This can be done by rewiring the inputs to outputs, hence no standard cell is required. So, the ‘abc’ command throws an error, since there is nothing to map to. 
-This is application for multiplication (and division) by any non-negative power of 2. 
+This is applicable for multiplication (and division) by any non-negative power of 2. 
 
 
