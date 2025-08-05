@@ -24,7 +24,9 @@ Blocking statements denote a sequential execution, which is most times wrong whe
 3.	Non standard HDL coding
 
 Relevant commands for GLS:
+```
 iverilog <path to primitives.v> <path to sky130_fd_sc_hd.v> <netlist name> <testbench file name>
+```
 further steps remain same as simulation
 
 ## RELEVANT LABS
